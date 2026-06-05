@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Swiggy Reimagined — AI-Powered Smart Group Ordering. Order food together with friends, family, and colleagues. GenAI helps everyone agree on what to eat.">
+    <meta name="theme-color" content="#FC8019">
+    <title>Swiggy — AI Group Ordering</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app" class="app-container">
+        <!-- Top Navbar -->
+        <nav id="navbar" class="navbar">
+            <div class="navbar__location">
+                <span class="material-icons-round navbar__location-icon">location_on</span>
+                <div class="navbar__location-text">
+                    <div class="navbar__location-label">
+                        <span>Home</span>
+                        <span class="material-icons-round navbar__location-arrow">keyboard_arrow_down</span>
+                    </div>
+                    <p class="navbar__location-address">Koramangala, Bangalore</p>
+                </div>
+            </div>
+            <div class="navbar__actions">
+                <div class="navbar__btn" id="offersBtn">
+                    <span class="material-icons-round">local_offer</span>
+                </div>
+                <div class="navbar__btn" id="profileBtn">
+                    <span class="material-icons-round">person</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="mainContent" class="main-content">
+            <!-- HOME PAGE -->
+            <section id="homePage" class="page active">
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <div class="search-bar" id="searchBar">
+                        <span class="material-icons-round search-bar__icon">search</span>
+                        <input type="text" class="search-bar__input" placeholder="Search for restaurants and food" id="searchInput" autocomplete="off">
+                        <div class="search-divider"></div>
+                        <span class="material-icons-round search-bar__mic">mic</span>
+                    </div>
+                </div>
+
+                <!-- Promotional Banners -->
+                <div class="banners-section" id="bannersSection">
+                    <div class="banners-scroll scroll-row" id="bannersScroll"></div>
+                </div>
+
+                <!-- Category Carousel -->
+                <div class="section-header">
+                    <h2>What's on your mind?</h2>
+                </div>
+                <div class="category-carousel scroll-row" id="categoryCarousel"></div>
+
+                <!-- Filter Chips -->
+                <div class="filter-chips scroll-row" id="filterChips"></div>
+
+                <!-- Restaurants Section -->
+                <div class="section-header">
+                    <h1>Restaurants with online food delivery in Bangalore</h1>
+                </div>
+                <div class="restaurant-grid" id="restaurantGrid"></div>
+            </section>
+
+            <!-- RESTAURANT DETAIL PAGE -->
+            <section id="restaurantPage" class="page">
+                <div class="restaurant-detail" id="restaurantDetail"></div>
+            </section>
+
+            <!-- GROUP ORDER PAGE -->
+            <section id="groupOrderPage" class="page">
+                <div class="group-order-container" id="groupOrderContainer"></div>
+            </section>
+        </main>
+
+        <!-- Floating Action Button - Group Order -->
+        <button id="groupOrderFAB" class="fab" title="Start AI Group Order">
+            <span class="material-icons-round fab__icon">group_add</span>
+            <span>Group Order</span>
+        </button>
+
+        <!-- Bottom Navigation -->
+        <nav id="bottomNav" class="bottom-nav">
+            <div class="bottom-nav__item bottom-nav__item--active nav-item" data-page="food">
+                <span class="material-icons-round">restaurant</span>
+                <span class="bottom-nav__label">Food</span>
+            </div>
+            <div class="bottom-nav__item nav-item" data-page="instamart">
+                <span class="material-icons-round">shopping_bag</span>
+                <span class="bottom-nav__label">Instamart</span>
+            </div>
+            <div class="bottom-nav__item nav-item" data-page="dineout">
+                <span class="material-icons-round">table_restaurant</span>
+                <span class="bottom-nav__label">Dineout</span>
+            </div>
+            <div class="bottom-nav__item nav-item" data-page="reorder">
+                <span class="material-icons-round">replay</span>
+                <span class="bottom-nav__label">Reorder</span>
+            </div>
+            <div class="bottom-nav__item nav-item" data-page="genie">
+                <span class="material-icons-round">auto_awesome</span>
+                <span class="bottom-nav__label">Genie</span>
+            </div>
+        </nav>
+
+        <!-- Toast Notification -->
+        <div id="toast" class="toast"></div>
+
+        <!-- Modal Overlay -->
+        <div id="modalOverlay" class="modal-overlay" style="display:none"></div>
+
+        <!-- Cart Summary Slide-up -->
+        <div id="cartBar" class="cart-bar" style="display:none">
+            <div class="cart-bar__info">
+                <span class="cart-bar__count" id="cartCount">0 items</span>
+                <span class="cart-bar__total" id="cartTotal">₹0</span>
+            </div>
+            <div class="cart-bar__action" id="cartCheckoutBtn">
+                View Cart <span class="material-icons-round">shopping_bag</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="ai-engine.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
