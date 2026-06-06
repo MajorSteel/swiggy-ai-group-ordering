@@ -1,6 +1,7 @@
 /**
  * Swiggy Reimagined — AI-Powered Smart Group Ordering
- * Main Application Logic (Integrated with design system)
+ * Author: Vivek Kumar (Enroll: 23125038, Email: vivek_k@mfs.iitr.ac.in)
+ * Copyright (c) 2026 Vivek Kumar. All rights reserved.
  */
 
 (function () {

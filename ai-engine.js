@@ -1,6 +1,8 @@
 /**
  * ============================================================
  *  AI ENGINE — GenAI-Powered Consensus Engine for Group Ordering
+ *  Author: Vivek Kumar (Enroll: 23125038, Email: vivek_k@mfs.iitr.ac.in)
+ *  Copyright (c) 2026 Vivek Kumar. All rights reserved.
  * ============================================================
  *
  *  Simulates a generative-AI backend that:

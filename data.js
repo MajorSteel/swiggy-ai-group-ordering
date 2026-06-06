@@ -1,6 +1,8 @@
 /**
  * ============================================================
  * SWIGGY CLONE — MOCK DATA
+ * Author: Vivek Kumar (Enroll: 23125038, Email: vivek_k@mfs.iitr.ac.in)
+ * Copyright (c) 2026 Vivek Kumar. All rights reserved.
  * ============================================================
  * All mock data for the Swiggy food delivery clone with
  * AI Group Ordering features. Globally accessible via

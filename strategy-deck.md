@@ -1,5 +1,12 @@
 # Strategy Deck: Swiggy Reimagined with AI Group Ordering
 
+**Student Name:** Vivek Kumar  
+**Enrollment:** 23125038  
+**Email:** vivek_k@mfs.iitr.ac.in  
+**Copyright (c) 2026 Vivek Kumar. All rights reserved.**
+
+---
+
 ## Slide 1: Problem Introduction + Impact + User Breakdown
 
 ### The Problem
